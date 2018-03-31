@@ -27,3 +27,9 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
   <li><a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/releases">Download</a> for older version Sketch.</li>
   <li>Regards, KhY.</li>
 </ul>
+
+# Versions
+<ul>
+  <li>v3.41 - Works with Sketch 49.2 and below</li>
+  <li>v3.40 - Works with Sketch 48 and below</li>
+</ul>
