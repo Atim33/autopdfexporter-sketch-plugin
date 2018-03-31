@@ -1,7 +1,8 @@
 # Auto PDF Exporter nSlicer Sketch Plugin
+A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed!
 
-A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed! Plugin auto creates slices from prefixed Artboards and exports them into a single page-sorted pdf file.
-
+## What?
+Have you ever needed to export specific artboards to a single combined pdf. This Plugin does just that and auto creates slices from prefixed Artboards then exports them into a single page-sorted pdf file. The Plugin auto-exports all '[S]' Prefix artboards to a single pdf file.
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview.png"></img>
 
 
@@ -25,7 +26,6 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 <ul>
   <li>Download <a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip">master.zip</a>, unzip it, then double-click the "Auto-PDF-Exporter-nSlicer.sketchplugin".</li>
   <li><a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/releases">Download</a> for older version Sketch.</li>
-  <li>Regards, KhY.</li>
 </ul>
 
 ## Versions
@@ -33,3 +33,7 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
   <li>v3.41 - Works with Sketch 49.2 and below</li>
   <li>v3.40 - Works with Sketch 48 and below</li>
 </ul>
+
+
+## Thanks
+Hope you find this plugin useful. If you have ideas to improve it, please don't hesitate to create a new issue or pull request. Regards, KhY.
