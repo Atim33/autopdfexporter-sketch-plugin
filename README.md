@@ -7,9 +7,9 @@ Have you ever needed to export specific artboards to a single combined pdf. This
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview.png"></img>
 
 ## Artboards on top of artboards
-<img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview2.png"></img>
-
 Plugin also works with Artboards on top of Arboards by auto creating slices, works with Sketch 49.
+
+<img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview2.png"></img>
 
 
 ## Instructions
