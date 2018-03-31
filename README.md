@@ -23,6 +23,11 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 
 .The '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file..
 
+# Installation
+<ul>
+  <li>Download <a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip">master.zip</a>, unzip it, then double-click the "automate-sketch.sketchplugin".</li>
+  <li>Download for older version Sketch.</li>
+</ul>
 
 Regards,
 KhY.
