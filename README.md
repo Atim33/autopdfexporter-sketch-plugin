@@ -7,7 +7,7 @@ Have you ever needed to export specific artboards to a single combined pdf. This
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview.png"></img>
 
 ## Artboards on top of artboards
-Plugin also works with Artboards on top of Arboards by auto creating slices. Works with Sketch 49.
+Plugin also works with Artboards on top of Arboards by auto creating slices (Works with Sketch 49). The slices will be created temporarily and removed allowing you to change your artboard sizes at any point, with the new slices updating to the new artboard sizes.
 
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview2.png"></img>
 
