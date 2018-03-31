@@ -1,7 +1,7 @@
 {
     "name" : "Auto PDF Exporter nSlicer",
     "identifier" : "khy.autopdfexporter",
-    "version" : "3.40",
+    "version" : "3.41",
     "description" : "A simple plugin for Sketch to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed! by auto creating slices from prefixed Artboards and exporting them.",
     "author" : "KhY.",
     "commands" : [
@@ -9,7 +9,7 @@
         "script" : "main.js",
         "handler" : "onRun",
         "shortcut" : "",
-        "name" : " ✂️ Auto-export all '[S]' Prefix Artboards to PDF (v3.40)",
+        "name" : " ✂️ Auto-export all '[S]' Prefix Artboards to PDF",
         "identifier" : "selectexportables"
       }
     ],
