@@ -9,8 +9,10 @@
         "script" : "main.js",
         "handler" : "onRun",
         "shortcut" : "",
-        "name" : " ✂️ Auto-export all '[S]' Prefix Artboards to PDF",
-        "identifier" : "selectexportables"
+        "identifier" : "autopdfexporter",
+        "description" : "Auto-export all '[S]' Prefix artboards to PDF, no slices needed!",
+        "icon" : "autoPDFexporter.png",
+        "name" : "✂️ Auto-export all '[S]' Prefix Artboards to PDF"
       }
     ],
     "menu": {
