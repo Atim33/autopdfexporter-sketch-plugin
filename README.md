@@ -3,6 +3,7 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 
 
 
+
 -- instructions--
 
 [1] Firstly to set which Artboards you want to export to a single pdf, the only thing you need to do is prefix the artboard's name with the characters "[S]" e.g. "[S] Artboard 1", that's it!
@@ -10,6 +11,7 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 [2] To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. "[S] 1.0 Intro", "[S] 2.1 Welcome" .etc there's a sorting mechanism that will order them alphabetically 0~9 then A~Z, based on the artboard name and not the position within the sketch file.
 
 [3] That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.
+
 
 
 -- notes--
