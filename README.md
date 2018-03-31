@@ -16,6 +16,9 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 [3] That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.
 
 
+Regards,
+KhY.
+
 
 # Notes
 
@@ -26,8 +29,5 @@ A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no sl
 # Installation
 <ul>
   <li>Download <a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip">master.zip</a>, unzip it, then double-click the "automate-sketch.sketchplugin".</li>
-  <li>Download for older version Sketch.</li>
+  <li><a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/releases">Download</a> for older version Sketch.</li>
 </ul>
-
-Regards,
-KhY.
