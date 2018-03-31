@@ -2,7 +2,7 @@
 A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed!
 
 ## What?
-Have you ever needed to export specific artboards to a single combined pdf. This Plugin does just that and auto creates slices from prefixed Artboards then exports them into a single page-sorted pdf file. The Plugin auto-exports all '[S]' Prefix artboards to a single pdf file.
+Have you ever needed to export specific artboards to a single combined pdf. This Plugin does just that and auto creates slices from prefixed Artboards then exports them into a single page-sorted pdf file. The Plugin auto-exports all '[S]' Prefix artboards to a single pdf file. Works with Artboards within Arboards and embeded Artboards by auto creating slices.
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview.png"></img>
 
 
