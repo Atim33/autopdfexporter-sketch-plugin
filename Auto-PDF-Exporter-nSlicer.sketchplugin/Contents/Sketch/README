@@ -1,4 +1,4 @@
-Solution to export PDF's with a specific prefix '[S]', by auto creating slices from artboards and exporting them :)
+A simple plugin for Sketch to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed! by auto creating slices from prefixed Artboards and exporting them.
 
 -- instructions--
 [1] Firstly to set which Artboards you want to export to a single pdf, the only thing you need to do is prefix the artboard's name with the characters "[S]" e.g. "[S] Artboard 1", that's it!
