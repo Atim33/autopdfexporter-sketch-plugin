@@ -1,5 +1,5 @@
 # Auto PDF Exporter nSlicer Sketch Plugin
-A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf. Solves the issue of "my Artboard won’t export other Artboards on top of it", no manual slices needed!
+A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf. Simplifiers the issue of "my Artboard won’t export other Artboards on top of it", no manual slices needed!
 
 Presentation's in a click: Very often presentation material is still needed. This plugin can help eliminate the need to create ppt's presentations of designs. All presentations slides can be created in Sketch and exported to a single pdf with one click, eliminating the double work of maintaining a ppt file with embedded png's and a sketch file of the original designs (especially when changes take place) making design updates to the pdf presentation/documentation easier and more seamless.
 
@@ -26,8 +26,9 @@ Plugin also works with Artboards on top of Arboards by auto creating slices (Wor
 
 ## Additional Notes
 <ul>
-  <li>Removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.</li>
   <li>The '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file.</li>
+  <li>Removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.</li>
+  <li>Simplifiers the issue of Sketch 49 <a href="https://www.sketchapp.com/support/troubleshooting/nested-artboard-export">"my Artboard won’t export other Artboards on top of it"</a>, no manual slices needed!</li>
 </ul>
 
 ## Installation
