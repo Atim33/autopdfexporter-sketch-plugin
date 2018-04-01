@@ -31,12 +31,12 @@ Plugin also works with Artboards on top of Arboards by auto creating slices (Wor
 ## Installation
 <ul>
   <li>Download <a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip">master.zip</a>, unzip it, then double-click the "Auto-PDF-Exporter-nSlicer.sketchplugin".</li>
+  <li>Latest: https://github.com/Atim33/autopdfexporter-sketch-plugin</li>
   <li><a href="https://github.com/Atim33/autopdfexporter-sketch-plugin/releases">Download</a> for older version Sketch.</li>
 </ul>
 
 ## Versions
 <ul>
-  <li>Latest: https://github.com/Atim33/autopdfexporter-sketch-plugin</li>
   <li>v3.45 - Works with Sketch 49.2 and below</li>
   <li>v3.40 - Works with Sketch 48 and below</li>
 </ul>
