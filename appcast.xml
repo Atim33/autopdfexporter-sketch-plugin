@@ -6,6 +6,17 @@
     <description>A Sketch Plugin to auto-export all [S] Prefix artboards to a single pdf, no slices needed! by auto creating slices from prefixed Artboards and exporting them.</description>
     <language>en</language>
     <item>
+        <title>Version 3.45</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>Minor update v3.45</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip" sparkle:version="3.45"/>
+    </item>
+    <item>
         <title>Version 3.43</title>
         <description>
           <![CDATA[
@@ -14,29 +25,7 @@
             </ul>
           ]]>
         </description>
-        <enclosure url="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/master.zip" sparkle:version="3.42"/>
-    </item>
-    <item>
-        <title>Version 3.42</title>
-        <description>
-          <![CDATA[
-            <ul>
-              <li>Minor update v3.42</li>
-            </ul>
-          ]]>
-        </description>
-        <enclosure url="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/3.42.zip" sparkle:version="3.42"/>
-    </item>
-    <item>
-        <title>Version 3.41</title>
-        <description>
-          <![CDATA[
-            <ul>
-              <li>Minor update v3.41</li>
-            </ul>
-          ]]>
-        </description>
-        <enclosure url="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/3.41.zip" sparkle:version="3.41"/>
+        <enclosure url="https://github.com/Atim33/autopdfexporter-sketch-plugin/archive/3.43.zip" sparkle:version="3.43"/>
     </item>
   </channel>
 </rss>
