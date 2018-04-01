@@ -61,142 +61,154 @@ function onRun(context) {
 	//------------------------------
 	artboards_for_export.sort(naturalSort)
  
- 
-	//------------------------------
-	// Loop through Artboards_for_export
-	// & Create temp slices
-	//------------------------------
-    var slices = [] // Keep track of all the temporary slices we create, so we can delete them later
-	var slices_for_export_debug = "";
-	for (i = 0; i < artboards_for_export.length; i++) { 
-		//------------------------------
-		// Create temp slices
-		//------------------------------
-		var curArtboard = artboards_for_export[i];
-		slices_for_export_debug += curArtboard.name() + ", " ;  //FOR DEBUG
-      	var slice = MSSliceLayer.sliceLayerFromLayer(curArtboard)
-		var rect = curArtboard.absoluteRect()
-      	slice.absoluteRect().setX(rect.origin().x)
-      	slice.absoluteRect().setY(rect.origin().y)
-      	slice.absoluteRect().setWidth(rect.size().width)
-      	slice.absoluteRect().setHeight(rect.size().height)
-    	slices.push(slice)
-	}//------------------------------
-	// Debug test..
-	//------------------------------
-	//alertMsg("Debug Message", "Temp_slices: #" + slices.length + "\r\n\r\nSlices: " + slices_for_export_debug + ".\r\n\r\n\r\nWorkeds!!", "Got it")
 
-
-
-	//------------------------------
-	// Export Slices ;)
-	//------------------------------
-	slices_for_export_debug = "";
-    var slices_for_export = [] // Keep track of all the temporary slices we create, so we can delete them later
-	var myslices = doc.currentPage().exportableLayers();
-	var loop = myslices.objectEnumerator();
-	while (slice = loop.nextObject()) {
-		if (slice instanceof MSSliceLayer && slice.name().startsWith("[S]")) {
-			//slice.select_byExpandingSelection(true, true);
-			slices_for_export_debug += slice.name() + ", " ;  //FOR DEBUG
-			slices_for_export.push(slice)
-		}	
-  	}//------------------------------
-	// Debug test..
-	//------------------------------
-	//alertMsg("Debug Message", "Slices_for_export: #" + slices_for_export.length + "\r\n\r\nSlices: " + slices_for_export_debug + ".\r\n\r\n\r\nWorkedx!!", "Got it")
-
-
-	//------------------------------
-	// PNG export
-	//------------------------------
-  	//context.document.exportSliceLayers(slices)
+	//-------------------------------------------------------------------------------
+	// Check is [S] prefix artboards exist
+	//-------------------------------------------------------------------------------
+	var slices_length = artboards_for_export.length;
+	if(slices_length == 0){
+		var none_instructions = "\r\n-- instructions--\r\n[1] Firstly set which Artboards you want to export, the only thing you need to do is prefix the artboard's name with the characters \"[S]\" e.g. \"[S] Artboard 1\".\r\n\r\n[2] To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. \"[S] 1.0 Intro\", \"[S] 2.1 Welcome\" .etc there's a sorting mechanism that will order them alphabetically 0~9 then A~Z, based on the artboard name and not the position within the sketch file.\r\n\r\n[3] That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.\r\n\r\n"
+		alertMsg_ok("✂️ No '[S]' Prefix artboards found!", none_instructions, "Got it")
 	
 	
-
-	//------------------------------
-	// Instructions
-	//------------------------------	
-	var instructions = "A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed! Plugin auto creates slices from prefixed Artboards and exports them into a single page-sorted pdf file :)\r\n\r\n-- instructions--\r\n[1] Firstly to set which Artboards you want to export to a single pdf, the only thing you need to do is prefix the artboard's name with the characters \"[S]\" e.g. \"[S] Artboard 1\", that's it!\r\n\r\n[2] To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. \"[S] 1.0 Intro\", \"[S] 2.1 Welcome\" .etc there's a sorting mechanism that will order them alphabetically 0~9 then A~Z, based on the artboard name and not the position within the sketch file.\r\n\r\n[3] That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.\r\n\r\n[4] Note. removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.\r\n\r\n-- notes--\r\nThe '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file.."
-	var alertResponse = alertMsgInput("✂️ Auto-export PDF instructions!", instructions, " Auto-export PDF ! ")  
-
-	
-	//------------------------------
-	// IF alertResponse = "Export"
-	//------------------------------
-	if (alertResponse == '1000') {
+	}else{//Check is [S] prefix artboards exist
 		//------------------------------
-		// PDF export
+		// Loop through Artboards_for_export
+		// & Create temp slices
 		//------------------------------
-		//var defaults = {exportToImages: true, exportImagesScale: 2.0} // true false
-		var filesToDelete = []
-		var pdf = PDFDocument.alloc().init()
-		var exportName = doc.hudClientName().replace(".sketch","");
-		var saveLocation = promptSaveLocation(exportName)
-
-
-		for (i = 0; i < slices_for_export.length; i++) { 	
+	    var slices = [] // Keep track of all the temporary slices we create, so we can delete them later
+		var slices_for_export_debug = "";	
+		for (i = 0; i < artboards_for_export.length; i++) { 
 			//------------------------------
-			// Export format – PNG image
+			// Create temp slices
 			//------------------------------
-			if (defaults.exportToImages) {
-	      	  var artboard = slices_for_export[i];	
+			var curArtboard = artboards_for_export[i];
+			slices_for_export_debug += curArtboard.name() + ", " ;  //FOR DEBUG
+	      	var slice = MSSliceLayer.sliceLayerFromLayer(curArtboard)
+			var rect = curArtboard.absoluteRect()
+	      	slice.absoluteRect().setX(rect.origin().x)
+	      	slice.absoluteRect().setY(rect.origin().y)
+	      	slice.absoluteRect().setWidth(rect.size().width)
+	      	slice.absoluteRect().setHeight(rect.size().height)
+	    	slices.push(slice)
+		}//------------------------------
+		// Debug test..
+		//------------------------------
+		//alertMsg("Debug Message", "Temp_slices: #" + slices.length + "\r\n\r\nSlices: " + slices_for_export_debug + ".\r\n\r\n\r\nWorkeds!!", "Got it")
 
-	      	  // Create a temporary image of the artboard
-	      	  var random = NSUUID.UUID().UUIDString()
-	      	  var imagePath = NSTemporaryDirectory() + artboard.objectID() + ' ' + random + '.png'
 
-	      	  // Create a new temporary export option
-	      	  artboard.exportOptions().addExportFormat()
-	      	  var newExportFormat = artboard.exportOptions().exportFormats().lastObject()
-	      	  newExportFormat.name = ''
-	      	  newExportFormat.format = 'png'
+
+		//------------------------------
+		// Export Slices ;)
+		//------------------------------
+		slices_for_export_debug = "";
+	    var slices_for_export = [] // Keep track of all the temporary slices we create, so we can delete them later
+		var myslices = doc.currentPage().exportableLayers();
+		var loop = myslices.objectEnumerator();
+		while (slice = loop.nextObject()) {
+			if (slice instanceof MSSliceLayer && slice.name().startsWith("[S]")) {
+				//slice.select_byExpandingSelection(true, true);
+				slices_for_export_debug += slice.name() + ", " ;  //FOR DEBUG
+				slices_for_export.push(slice)
+			}	
+	  	}//------------------------------
+		// Debug test..
+		//------------------------------
+		//alertMsg("Debug Message", "Slices_for_export: #" + slices_for_export.length + "\r\n\r\nSlices: " + slices_for_export_debug + ".\r\n\r\n\r\nWorkedx!!", "Got it")
+
+
+		//------------------------------
+		// PNG export
+		//------------------------------
+	  	//context.document.exportSliceLayers(slices)
+	
+	
+
+		//------------------------------
+		// Instructions
+		//------------------------------	
+		var instructions = "A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed! Plugin auto creates slices from prefixed Artboards and exports them into a single page-sorted pdf file :)\r\n\r\n-- instructions--\r\n[1] Firstly to set which Artboards you want to export to a single pdf, the only thing you need to do is prefix the artboard's name with the characters \"[S]\" e.g. \"[S] Artboard 1\", that's it!\r\n\r\n[2] To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. \"[S] 1.0 Intro\", \"[S] 2.1 Welcome\" .etc there's a sorting mechanism that will order them alphabetically 0~9 then A~Z, based on the artboard name and not the position within the sketch file.\r\n\r\n[3] That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.\r\n\r\n[4] Note. removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.\r\n\r\n-- notes--\r\nThe '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file.."
+		var alertResponse = alertMsgInput("✂️ Auto-export PDF instructions!", instructions, " Auto-export PDF ! ")  
+
+	
+		//------------------------------
+		// IF alertResponse = "Export"
+		//------------------------------
+		if (alertResponse == '1000') {
+			//------------------------------
+			// PDF export
+			//------------------------------
+			//var defaults = {exportToImages: true, exportImagesScale: 2.0} // true false
+			var filesToDelete = []
+			var pdf = PDFDocument.alloc().init()
+			var exportName = doc.hudClientName().replace(".sketch","");
+			var saveLocation = promptSaveLocation(exportName)
+
+
+			for (i = 0; i < slices_for_export.length; i++) { 	
+				//------------------------------
+				// Export format – PNG image
+				//------------------------------
+				if (defaults.exportToImages) {
+		      	  var artboard = slices_for_export[i];	
+
+		      	  // Create a temporary image of the artboard
+		      	  var random = NSUUID.UUID().UUIDString()
+		      	  var imagePath = NSTemporaryDirectory() + artboard.objectID() + ' ' + random + '.png'
+
+		      	  // Create a new temporary export option
+		      	  artboard.exportOptions().addExportFormat()
+		      	  var newExportFormat = artboard.exportOptions().exportFormats().lastObject()
+		      	  newExportFormat.name = ''
+		      	  newExportFormat.format = 'png'
 		  
-	      	  //newExportFormat.scale
-	      	  newExportFormat.scale = horizontalTextField.stringValue(); //defaults.exportImagesScale  
-			  ////alertMsg("Debug Message", "bla_11", "Got it")
+		      	  //newExportFormat.scale
+		      	  newExportFormat.scale = horizontalTextField.stringValue(); //defaults.exportImagesScale  
+				  ////alertMsg("Debug Message", "bla_11", "Got it")
 		  
-	      	  var rect = artboard.absoluteRect().rect()
-	      	  var slice = MSExportRequest.exportRequestFromExportFormat_layer_inRect_useIDForName(newExportFormat, artboard, rect, false)
-	      	  doc.saveArtboardOrSlice_toFile(slice, imagePath)
-	      	  filesToDelete.push(imagePath)
-	      	  artboard.exportOptions().removeExportFormat(newExportFormat)
+		      	  var rect = artboard.absoluteRect().rect()
+		      	  var slice = MSExportRequest.exportRequestFromExportFormat_layer_inRect_useIDForName(newExportFormat, artboard, rect, false)
+		      	  doc.saveArtboardOrSlice_toFile(slice, imagePath)
+		      	  filesToDelete.push(imagePath)
+		      	  artboard.exportOptions().removeExportFormat(newExportFormat)
 
-	      	  // Add the image as a page to our PDF
-	      	  var image = NSImage.alloc().initByReferencingFile(imagePath)	
-	      	  var artboardPDF = PDFPage.alloc().initWithImage(image)
-	      	  pdf.insertPage_atIndex(artboardPDF, pdf.pageCount())		
+		      	  // Add the image as a page to our PDF
+		      	  var image = NSImage.alloc().initByReferencingFile(imagePath)	
+		      	  var artboardPDF = PDFPage.alloc().initWithImage(image)
+		      	  pdf.insertPage_atIndex(artboardPDF, pdf.pageCount())		
 			
 			
-			//------------------------------
-			// Export format – PDF
-			//------------------------------
-			} else {
-				var curArtboard = slices_for_export[i];	
-				var artboard_pdf = MSPDFBookExporter.pdfFromArtboard(curArtboard);
-				pdf.insertPage_atIndex(artboard_pdf, pdf.pageCount())
+				//------------------------------
+				// Export format – PDF
+				//------------------------------
+				} else {
+					var curArtboard = slices_for_export[i];	
+					var artboard_pdf = MSPDFBookExporter.pdfFromArtboard(curArtboard);
+					pdf.insertPage_atIndex(artboard_pdf, pdf.pageCount())
 		
-			}
-		}pdf.writeToURL(saveLocation)
+				}
+			}pdf.writeToURL(saveLocation)
+		
+		
 
-
-	//------------------------------
-	// IF alertResponse = "Cancel"
-	//------------------------------
-	}else{
-		//alertMsg("0", "0", "0")  
-	}
+		//------------------------------
+		// IF alertResponse = "Cancel"
+		//------------------------------
+		}else{
+			//alertMsg("0", "0", "0")  
+		}
 	
 
-	//------------------------------
-	// Remove temporary slices from the document
-	//------------------------------
-    slices.forEach(function(slice) {
-      slice.removeFromParent()
-    })//------------------------------
-	// Debug test..
-	//------------------------------
-	//alertMsg("Alert Message", "Removed temporary slices from the document!", "Got it")  
+		//------------------------------
+		// Remove temporary slices from the document
+		//------------------------------
+	    slices.forEach(function(slice) {
+	      slice.removeFromParent()
+	    })//------------------------------
+		// Debug test..
+		//------------------------------
+		//alertMsg("Alert Message", "Removed temporary slices from the document!", "Got it") 
+	}//Check is [S] prefix artboards exist	 
 };
 
 
@@ -277,6 +289,19 @@ function alertMsg(title, message, button) {
   alert.setInformativeText(message)
   alert.addButtonWithTitle(button)
   alert.addButtonWithTitle("Cancel")
+  return alert.runModal()
+}
+
+
+
+//-------------------------------------------------------------------------------
+// Show an alert
+//-------------------------------------------------------------------------------
+function alertMsg_ok(title, message, button) {
+  var alert = NSAlert.alloc().init()
+  alert.setMessageText(title)
+  alert.setInformativeText(message)
+  alert.addButtonWithTitle(button)
   return alert.runModal()
 }
 
