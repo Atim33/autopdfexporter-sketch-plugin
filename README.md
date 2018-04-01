@@ -1,6 +1,8 @@
 # Auto PDF Exporter nSlicer Sketch Plugin
 A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf, no slices needed!
 
+Presentation's in a click: Very often presentation material is still needed. This plugin can help eliminate the need to create ppt's presentations of designs. All presentations slides can be created in Sketch and exported to a single pdf with one click, eliminating the double work of maintaining a ppt file with embedded png's and a sketch file of the original designs (especially when changes take place) making design updates to the pdf presentation/documentation easier and more seamless.
+
 ## What?
 Have you ever needed to export specific artboards to a single combined pdf. This Plugin does just that and auto creates slices from prefixed Artboards then exports them into a single page-sorted pdf file. The Plugin auto-exports all '[S]' Prefix artboards to a single pdf file. 
 
