@@ -28,7 +28,8 @@ Plugin also works with Artboards on top of Arboards by auto creating slices (Wor
 <ul>
   <li>The '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file.</li>
   <li>Removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.</li>
-  <li>Simplifiers the issue of Sketch 49 <a href="https://www.sketchapp.com/support/troubleshooting/nested-artboard-export">"my Artboard won’t export other Artboards on top of it"</a>, no manual slices needed!</li>
+  <li>Simplifiers the issue of Sketch 49 "<a href="https://www.sketchapp.com/support/troubleshooting/nested-artboard-export">my Artboard won’t export other Artboards on top of it</a>", no manual slices needed!</li>
+  <li>Artboards are converted to png's first to preserve gradients and colour accuracy in the final PDF files.</li>
 </ul>
 
 ## Installation
