@@ -20,19 +20,19 @@ Plugin also works with Artboards on top of Arboards by auto creating slices (Wor
 ## Instructions
 
 <ol type="1">
-  <li>Firstly to set which Artboards you want to export to a single pdf, the only thing you need to do is prefix the artboard's name with the characters "[S]" e.g. "[S] Artboard 1", that's it!</li>
+  <li>Step-1. To set which Artboards you want to export to a single pdf, the only thing you need to do is add the prefix "[S]" to the artboard's name e.g. "[S] Artboard 1", that's it!</li>
 
-  <li>To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. "[S] 1.0 Intro", "[S] 2.1 Welcome" .etc there's a sorting mechanism that will order them alphabetically 0-9 then A-Z, based on the artboard name and not the position within the sketch file.</li>
+  <li>Step-2. To set the order for which you want your Artboards to appear in the pdf, append any numbers or letters after the prefix e.g. "[S] 1.0 Intro", "[S] 2.1 Welcome" .etc there's a sorting mechanism that will order them alphabetically 0-9 then A-Z, based on the artboard name and not the position of the artboard within the sketch file.</li>
 
-  <li>That's it! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and finally remove the annoying slices.</li>
+  <li>Step-3. That's it! Run the plugin! The plugin will find all artboards with the prefix '[S]', add a temporary slice behind it, then export those slices to a single PDF and remove the temporary slices.</li>
 </ol>
 
 ## Additional Notes
 <ul>
-  <li>The '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix it will be added to the pdf file.</li>
-  <li>Removing the slices is useful as it allows you to change your artboard sizes at any point, the new slices will simply update to the new artboard sizes.</li>
+  <li>The '[S]' prefix is useful as we usually don't necessarily want to export all artboards but a select few. The [S] can be attached to both the Big Artboards and any small artboards on top of them, wherever there's an '[S]' prefix the artboard will be added and exported to the pdf file.</li>
+  <li>The plugin removes the temporary slices when its done, this is useful as it allows you to change your artboard sizes at any point and when you run the plugin again any the new slices will simply update to the new artboard sizes.</li>
   <li>Simplifiers the issue of Sketch 49 "<a href="https://www.sketchapp.com/support/troubleshooting/nested-artboard-export">my Artboard won’t export other Artboards on top of it</a>", no manual slices needed!</li>
-  <li>Artboards are converted to png's first to preserve gradients and colour accuracy in the final PDF files.</li>
+  <li>Note. Artboards are converted to png's first to preserve gradients and colour accuracy in the final PDF files.</li>
 </ul>
 
 ## Installation
