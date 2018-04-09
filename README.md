@@ -8,7 +8,7 @@ Very often presentation material is useful to illustrate a flow or product, this
 
 
 ## Artboards on top of artboards
-Plugin also works with Artboards on top of Arboards by auto creating slices (Works with Sketch 49). The slices will be created temporarily and removed allowing you to change your artboard sizes at any point, with the new slices updating to the new artboard sizes.
+Have artboards on top of other artboards, so do we! This plugin works with Artboards layered on top of other Arboards and will auto create slices for you (Works with Sketch 49 and below). The slices will be created temporarily to allow the export of the big artboards and will then be removed allowing you to change your artboard sizes at any point, with the new slices updating to the new artboard sizes.
 
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview2.png"></img>
 
