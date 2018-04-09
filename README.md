@@ -2,7 +2,7 @@
 A Sketch Plugin to auto-export all '[S]' Prefix artboards to a single pdf. Helps with the issue of "my Artboard won’t export other Artboards on top of it", no manual slices needed!
 
 ## Presentation's in a click
-Very often presentation material is still needed. This plugin can help eliminate the need to create ppt's presentations of designs. All presentations slides can be created in Sketch and exported to a single pdf with one click, eliminating the double work of maintaining a ppt file with embedded png's and a sketch file of the original designs (especially when changes take place) making design updates to the pdf presentation/documentation easier and more seamless.
+Very often presentation material is useful to illustrate a flow or product, this plugin helps eliminate the need to create a seperate Powerpoint/Keynote presentation. All presentation slides can be created directly in Sketch and exported to a single PDF with one click, eliminating the double work of maintaining a ppt file with embedded png's and a sketch file of the original designs (especially when changes take place) making design updates to your presentation/documentation easier and more seamless.
 
 <img src="https://github.com/Atim33/autopdfexporter-sketch-plugin/blob/master/overview3.png"></img>
 
