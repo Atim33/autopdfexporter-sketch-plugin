@@ -141,7 +141,7 @@ function onRun(context) {
 			//var defaults = {exportToImages: true, exportImagesScale: 2.0} // true false
 			var filesToDelete = []
 			var pdf = PDFDocument.alloc().init()
-			var exportName = doc.hudClientName().replace(".sketch","");
+			var exportName = doc.cloudName().replace(".sketch","");
 			var saveLocation = promptSaveLocation(exportName)
 
 
