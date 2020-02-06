@@ -12,7 +12,7 @@
       {
         "script": "main.js",
         "handler": "onRun",
-        "shortcut": "option command p",
+        "shortcut": "ctrl cmd p",
         "identifier": "autopdfexporter",
         "description": "Auto-export all '[S]' Prefix artboards to PDF, no slices needed!",
         "icon": "autoPDFexporter.png",
