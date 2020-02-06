@@ -35,6 +35,23 @@ function onRun(context) {
     	page.changeSelectionBySelectingLayers_([]);
   	}
 
+	
+    	//------------------------------
+    	// Remove any existing [S] slices
+    	//------------------------------
+   	// var slice = doc.currentPage().artboards();
+    	var cleanup_slices_array = []
+    	var cleanup_slices_debug = "";
+    	var cleanup_slices_array = doc.currentPage().exportableLayers();
+    	var cleanup_slices_loop = cleanup_slices_array.objectEnumerator();
+    	while (slice = cleanup_slices_loop.nextObject()) {
+        	if (slice instanceof MSSliceLayer && slice.name().startsWith("[S]")) {
+            		slice.select_byExpandingSelection(true, true);
+            		cleanup_slices_debug += slice.name() + ", " ;  //FOR DEBUG
+            		slice.removeFromParent();
+        	}   
+    	}//alertMsg("Debug Message", "Artboards_for_export: #" + cleanup_slices_array.count() + "\r\nArtboards: " + cleanup_slices_debug + ".", "Got it")
+     
 
 	//------------------------------
 	// Filter artboards_for_export
