@@ -141,7 +141,8 @@ function onRun(context) {
 			//var defaults = {exportToImages: true, exportImagesScale: 2.0} // true false
 			var filesToDelete = []
 			var pdf = PDFDocument.alloc().init()
-			var exportName = doc.hudClientName().replace(".sketch","");
+			var exportName = context.document.cloudName();//"Artboards";
+			//doc.hudClientName().replace(".sketch",""); >> stopped working
 			var saveLocation = promptSaveLocation(exportName)
 
 
