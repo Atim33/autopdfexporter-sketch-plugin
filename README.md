@@ -35,6 +35,7 @@ Have you ever needed to export specific artboards to a single combined pdf. This
   <li>The plugin removes the temporary slices when its done, this is useful as it allows you to change your artboard sizes at any point and when you run the plugin again any the new slices will simply update to the new artboard sizes.</li>
   <li>Simplifiers the issue of Sketch 49 "<a href="https://www.sketchapp.com/support/troubleshooting/nested-artboard-export">my Artboard won’t export other Artboards on top of it</a>", no manual slices needed!</li>
   <li>Note. Artboards are converted to png's first to preserve gradients and colour accuracy in the final PDF files.</li>
+  <li>Updated to fix issue in Sketch 60.</li>
 </ul>
 
 ## Installation
