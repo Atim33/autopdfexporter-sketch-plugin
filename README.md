@@ -48,7 +48,7 @@ Have you ever needed to export specific artboards to a single combined pdf. This
 
 ## Versions
 <ul>
-  <li>v3.52 - Fix for Sketch 60 and above</li>
+  <li>v3.65 - Fix for Sketch 60 and above</li>
   <li>v3.46 - Works with Sketch 49.2 to 60</li>
   <li>v3.40 - Works with Sketch 48 and below</li>
 </ul>
