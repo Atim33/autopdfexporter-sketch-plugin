@@ -6,11 +6,11 @@
     <description>A Sketch Plugin to auto-export all [S] Prefix artboards to a single pdf, no slices needed! by auto creating slices from prefixed Artboards and exporting them.</description>
     <language>en</language>
     <item>
-        <title>Version 3.61</title>
+        <title>Version 3.65</title>
         <description>
           <![CDATA[
             <ul>
-              <li>Minor update, fix for Sketch 60 and above v3.61</li>
+              <li>Minor update, fix for Sketch 60 and above v3.65</li>
             </ul>
           ]]>
         </description>
